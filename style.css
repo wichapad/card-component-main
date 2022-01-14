@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.content-items-mobile {
+  display: none;
+}
+/* container */
+.container {
+  max-width: 75rem;
+  width: 100%;
+  margin: 10% auto;
+  background: hsl(244, 38%, 16%);
+}
+.cotent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* items-section */
+.content-items {
+  padding: 0 80px;
+}
+.content-items h1 {
+  margin-top: 80px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.content-items h1 span {
+  color: hsl(277, 64%, 61%);
+}
+.content-items > p {
+  margin-top: 35px;
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 2;
+}
+
+/* footer */
+.footer {
+  margin-top: 75px;
+  margin-bottom: 65px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-items > h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.footer-items > p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+/* items-img */
+.content-items-desktop {
+  object-fit: cover;
+  background: linear-gradient(
+      hsl(277, 100%, 31%, 0.55),
+      hsl(277, 100%, 31%, 0.55)
+    ),
+    url(/images/image-header-desktop.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* media quries */
+/* resopon mobile */
+@media (width: 480px) {
+  /* container */
+  .container {
+    width: 80%;
+    height: auto;
+  }
+  .cotent-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-items {
+    text-align: center;
+    padding: 0;
+  }
+
+  /* image section */
+  .content-items-desktop {
+    display: none;
+  }
+  .content-items-mobile {
+    display: block;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(
+        hsl(277, 100%, 31%, 0.55),
+        hsl(277, 100%, 31%, 0.55)
+      ),
+      url(/images/image-header-mobile.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
+}
